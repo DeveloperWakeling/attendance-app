@@ -12,4 +12,4 @@ def index(request):
     #     'index.html',
     #     context={'num_students':num_students}
     # )
-    return HttpResponse('Attendance Record ' +  num_students)
+    return HttpResponse('Attendance Record ' +  istr(num_students))
