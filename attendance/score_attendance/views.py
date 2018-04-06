@@ -9,7 +9,7 @@ def index(request):
 
     return render(
         request,
-        'index.html',
+        'score_attendance/index.html',
         context={'students':students}
     )
     # return HttpResponse('Attendance Record ' + str(num_students))
