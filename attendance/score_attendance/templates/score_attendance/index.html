@@ -1,9 +1,12 @@
 {% if students %}
-    <ul>
     {% for student in students %}
-        <li>{student.first_name} {student_last_name}</li>
+    	<span>
+	       	<form action={% url 'addscore' student_id=student.pk %}><input type="submit" value="+" /></form>
+		-
+		<form action={% url 'subtractscore' student_id=student.pk %}><input type="submit" value="-" /></form>
+		<h3>{{student.firstname}} {{student.lastname}}: {{student.score}}</h3>
+	</span><br />
     {% endfor %}
-    </ul>
 {% else %}
     <p>No students avalaible</p>
 {% endif %}
