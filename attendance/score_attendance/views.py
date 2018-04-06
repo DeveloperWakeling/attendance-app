@@ -5,11 +5,11 @@ from .models import Student
 
 def index(request):
     # Generate Number of students in the database
-    num_students=Student.objects.all().count()
+    students=Student.objects.all()
 
-    # return render(
-    #     request,
-    #     'index.html',
-    #     context={'num_students':num_students}
-    # )
-    return HttpResponse('Attendance Record ' + str(num_students))
+    return render(
+        request,
+        'index.html',
+        context={'students':students}
+    )
+    # return HttpResponse('Attendance Record ' + str(num_students))

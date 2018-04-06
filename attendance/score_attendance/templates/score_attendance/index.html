@@ -1,0 +1,9 @@
+{% if students %}
+    <ul>
+    {% for student in students %}
+        <li>{student.first_name} {student_last_name}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No students avalaible</p>
+{% endif %}
